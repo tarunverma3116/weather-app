@@ -28,12 +28,12 @@ const SideNav: React.FunctionComponent<ISideNavProps> = (props) => {
       icon: <BiChart />,
       active: pathname === "/forecast" || pathname === "/forecast",
     },
-    {
-      label: "XTrade",
-      link: "/location",
-      icon: <SlLocationPin />,
-      active: pathname === "/location",
-    },
+    // {
+    //   label: "XTrade",
+    //   link: "/location",
+    //   icon: <SlLocationPin />,
+    //   active: pathname === "/location",
+    // },
   ];
 
   const secNavSettings = [

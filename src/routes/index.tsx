@@ -6,6 +6,7 @@ import Home from "../pages/home/index";
 import Layout from "../pages/layout/index";
 import { useCoordinations } from "../hooks/useCoordinations";
 import { useWeatherFetch } from "../hooks/useWeatherFetch";
+import Location from "../pages/location";
 
 // type Props = {
 //   location: {
@@ -59,7 +60,7 @@ export const PublicRoutes = () => {
         <Route path="/home" element={<Home weather={weather} />} />
         {/* <Route path="/details/:id" element={<Details />} /> */}
         <Route path="/forecast" element={<Details weather={weather} />} />
-        <Route path="/location" element={<Details weather={weather} />} />
+        <Route path="/location" element={<Location weather={weather} />} />
       </Route>
     </Routes>
   );

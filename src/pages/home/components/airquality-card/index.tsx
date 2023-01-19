@@ -27,7 +27,7 @@ const AirQualityCard = (props: Props) => {
           <div className="flex flex-col gap-2 h-auto text-left px-2 text-black">
             <p className="text-xxl font-bold">{props.weather.wind.speed} m/s</p>
             <p className="text-sm">
-              Sea Level - {props.weather.main.sea_level}
+              Visibility - {props.weather.current?.visibility / 1000} km
             </p>
           </div>
           <div className="grid grid-cols-2 gap-3 w-full">
@@ -36,8 +36,10 @@ const AirQualityCard = (props: Props) => {
               <p className="text-sm font-bold">{props.weather.wind.deg}°</p>
             </div>
             <div className="rounded-xl w-full bg-[#cce16a] flex flex-col gap-3 p-2">
-              <p className="text-xs">Gust</p>
-              <p className="text-sm font-bold">{props.weather.wind.gust}</p>
+              <p className="text-xs">Dew Point</p>
+              <p className="text-sm font-bold">
+                {props.weather.current?.dew_point}
+              </p>
             </div>
           </div>
         </div>

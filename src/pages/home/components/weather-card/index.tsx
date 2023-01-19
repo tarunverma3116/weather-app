@@ -16,7 +16,6 @@ const WeatherCard = (props: Props) => {
   useEffect(() => {
     var date = new Date();
     var currentHour = date.getHours();
-    console.log("currentHour", currentHour);
     if (currentHour >= 6 && currentHour <= 12) {
       setHour("Morning");
     } else if (currentHour >= 12 && currentHour <= 18) {
@@ -28,7 +27,6 @@ const WeatherCard = (props: Props) => {
     }
 
     //eslint-disable-next-line
-    console.log("hour", hour);
   }, [hour]);
 
   return (
@@ -44,7 +42,9 @@ const WeatherCard = (props: Props) => {
             </div>
             <div className="flex flex-col gap-1 items-start text-black">
               <p className="text-base font-bold">Weather</p>
-              <p className="text-s">Whats the weather</p>
+              <p className="text-s font-bold">
+                {props.weather.name},&nbsp;{props.weather.country}
+              </p>
             </div>
           </div>
           <div className="flex flex-col gap-2 h-auto text-left px-2 text-black">

@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
-import { LineChart, Line, Tooltip, XAxis, CartesianGrid } from "recharts";
+import { LineChart, Line } from "recharts";
 
 type Props = {
   day: any;
 };
 
 const TodayGraph = (props: Props) => {
-  console.log("day in today graph", props.day[0].feels_like);
   const [graph_data, setGraphData] = React.useState<any>(null);
 
   const covertKelvinToCelsius = (kelvin: any) => {
@@ -39,25 +38,37 @@ const TodayGraph = (props: Props) => {
     },
   ];
 
-  //   const graph_data = props.day.daily[0].feels_like;
-  //   console.log("graph_data", graph_data);
   return (
     <div>
-      {chart_data && (
-        <LineChart className="px-6" width={600} height={300} data={chart_data}>
-          <CartesianGrid strokeDasharray="3 3" />
-          {/* <XAxis dataKey="name" /> */}
-          {/* <YAxis /> */}
-          {/* <Tooltip /> */}
-          {/* <Legend /> */}
-          <Line
-            type="monotone"
-            dataKey="tempertaure"
-            stroke="#f97e28"
-            activeDot={{ r: 5 }}
-          />
-        </LineChart>
-      )}
+      <div className="rounded-xl shadow-md w-full aspect-auto p-6 flex flex-col gap-5 h-full">
+        <div className="flex-row flex gap-3 items-center">
+          {chart_data && (
+            <LineChart
+              className="px-6"
+              width={580}
+              height={175}
+              data={chart_data}
+            >
+              <Line
+                type="monotone"
+                dataKey="tempertaure"
+                stroke="#f97e28"
+                activeDot={{ r: 5 }}
+              />
+            </LineChart>
+          )}
+        </div>
+        <div className="grid grid-cols-4 gap-2 w-full">
+          {chart_data.map((data, index) => {
+            return (
+              <div className="w-full flex flex-col gap-3 p-2" key={index}>
+                <p className="text-xs">{data.name}</p>
+                <p className="text-sm font-bold">{data.tempertaure}°C</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };

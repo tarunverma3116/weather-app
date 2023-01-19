@@ -18,6 +18,10 @@ section {
 
 @font-face {
   font-family: Mont;
-  src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
+  src: url("./assets/fonts/Poppins-Regular.ttf");
   font-display: swap;
+}
+
+circle{
+  /* stroke-dasharray: 2; */
 }
