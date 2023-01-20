@@ -48,7 +48,7 @@ const SunCard = (props: Props) => {
 
   return (
     props.weather && (
-      <div className="w-full h-full shadow-md rounded-xl p-5 bg-[#f6f7f6]">
+      <div className="w-full h-full shadow-md rounded-xl p-5 glass text-white">
         <div className="flex flex-col justify-between gap-5 items-center">
           <SemiCircleProgressBar
             percentage={getTimePercentage()}
@@ -117,7 +117,7 @@ const SunCard = (props: Props) => {
             );
           })}
           <button
-            className="btn btn-primary w-full"
+            className="btn btn-[#f97e28] w-full"
             onClick={() => navigate("/forecast")}
           >
             Next 7 Days

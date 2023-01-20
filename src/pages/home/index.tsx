@@ -17,7 +17,9 @@ const Home = (props: Props) => {
             <WeatherCard weather={props.weather} />
             <AirQualityCard weather={props.weather} />
           </div>
-          {props.weather?.daily && <TodayGraph day={props.weather.daily} />}
+          {props.weather?.daily && (
+            <TodayGraph day={props.weather.daily} weather={props.weather} />
+          )}
         </div>
         <div className="basis-1/3 flex flex-col gap-3">
           <SunCard weather={props.weather} />

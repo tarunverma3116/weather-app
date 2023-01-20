@@ -3,3 +3,10 @@
     padding: 0px 15px;
     border-bottom: 2px solid rgb(223, 220, 220);
 }
+
+.today-graph-card{
+    background-image: url("../../../../assets/images/cards/3139756_37607.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}

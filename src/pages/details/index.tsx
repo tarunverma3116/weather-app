@@ -12,7 +12,7 @@ const Details = (props: Props) => {
   const [activeTab, setActiveTab] = React.useState("daily");
   return (
     <section>
-      <div className="flex flex-col justify-center align-center items-center w-full gap-6">
+      <div className="flex flex-col justify-center align-center text-white items-center w-full gap-6">
         <p className="font-bold text-xl">Weather Forecast</p>
         <div className="mb-4 border-b border-gray-200">
           <ul className="flex flex-wrap -mb-px text-sm font-medium text-center">

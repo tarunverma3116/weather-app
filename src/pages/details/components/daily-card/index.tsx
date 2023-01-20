@@ -21,7 +21,7 @@ const DailyCard = (props: Props) => {
   return (
     <div>
       {props.day && (
-        <div className="bg-white shadow-md rounded-xl p-5 flex flex-col gap-4">
+        <div className="glass text-white shadow-md rounded-xl p-5 flex flex-col gap-4">
           <img
             className="w-10 h-10 mx-auto"
             src={`http://openweathermap.org/img/w/${props.day.weather[0].icon}.png`}

@@ -13,7 +13,7 @@ const LargeNavbar: React.FunctionComponent<INavbarProps> = (props) => {
     navigate("/login");
   };
   return (
-    <div className="flex flex-shrink-0 glass h-16 pl-5 pr-8 fixed inset-x-0 top-0 items-stretch z-50 rounded">
+    <div className="flex flex-shrink-0 h-16 pl-5 pr-8 fixed inset-x-0 top-0 items-stretch z-50 rounded">
       <div className="w-64 flex items-center">
         <img className="w-[40px] h-auto" src={logo} alt="logo" />
       </div>

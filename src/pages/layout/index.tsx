@@ -59,7 +59,7 @@ const Layout = (props: Props) => {
   }, []);
 
   return (
-    <div className="flex flex-col flex-grow max-h-full max-w-full min-h-[100vh] bg-[white]">
+    <div className="flex flex-col flex-grow max-h-full max-w-full min-h-[100vh]">
       <Navbar />
       <div className="flex flex-grow max-h-full min-h-0 relative pt-14 max-w-full overflow-x-hidden">
         <SideNav />
