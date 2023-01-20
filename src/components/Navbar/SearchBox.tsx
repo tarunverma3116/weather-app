@@ -7,7 +7,7 @@ const SearchBox = (props: Props) => {
   return (
     <div className="relative flex items-center text-gray-600">
       <input
-        className="bg-[#F5F5F5] text-black font-bold text-s h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+        className="glass text-white font-bold text-s h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
         type="search"
         name="search"
         placeholder="Search locations..."

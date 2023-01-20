@@ -13,15 +13,15 @@ const LargeNavbar: React.FunctionComponent<INavbarProps> = (props) => {
     navigate("/login");
   };
   return (
-    <div className="flex flex-shrink-0 h-16 pl-5 pr-8 fixed inset-x-0 top-0 items-stretch z-50 rounded">
+    <div className="flex flex-shrink-0 h-16 pl-5 pr-8 bg-black fixed inset-x-0 top-0 items-stretch z-50">
       <div className="w-64 flex items-center">
         <img className="w-[40px] h-auto" src={logo} alt="logo" />
       </div>
-      <div className="flex items-center gap-2 border-l-2 border-white/10 pl-4"></div>
+      <div className="flex items-center gap-2 pl-4"></div>
       <div className="flex items-center justify-end flex-grow gap-6">
         <SearchBox />
         <button onClick={() => handleLogout()}>
-          <FiBell className="text-grey h-5 w-auto" />
+          <FiBell className="text-primary h-5 w-auto" />
         </button>
       </div>
     </div>
