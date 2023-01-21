@@ -5,7 +5,7 @@ type Props = {};
 
 const SearchBox = (props: Props) => {
   return (
-    <div className="relative flex items-center text-gray-600">
+    <div className="relative hidden lg:flex items-center text-gray-600">
       <input
         className="glass text-white font-bold text-s h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
         type="search"

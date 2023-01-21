@@ -96,7 +96,7 @@ const SunCard = (props: Props) => {
                 key={index}
                 className="rounded-xl w-full shadow-md bg-white justify-between flex flex-row p-4 text-black items-center"
               >
-                <div className="flex flex-row gap-3 items-center">
+                <div className="flex flex-col lg:flex-row gap-3 items-center">
                   <img
                     src={`https://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
                     alt="weather icon"

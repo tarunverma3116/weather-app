@@ -7,11 +7,17 @@
   background: black;
 }
 
+.outlet{
+  padding-top: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 section {
   margin: 0;
   padding: 20px;
   text-align: center;
-  font-family: Mont;
+  width: 100%;
 }
 
 @font-face {
@@ -22,4 +28,18 @@ section {
 
 circle{
   /* stroke-dasharray: 2; */
+}
+
+@media (max-width: 768px) {
+  .outlet{
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  section{
+    padding: 0px;
+    width: 100%;
+    margin: 0;
+  }
 }

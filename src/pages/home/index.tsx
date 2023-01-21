@@ -13,7 +13,7 @@ const Home = (props: Props) => {
     <section>
       <div className="flex flex-col lg:flex-row w-full h-full gap-6">
         <div className="basis-2/3 flex flex-col gap-6">
-          <div className="grid grid-cols-2 gap-6 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
             <WeatherCard weather={props.weather} />
             <AirQualityCard weather={props.weather} />
           </div>

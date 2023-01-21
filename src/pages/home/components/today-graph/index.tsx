@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { LineChart, Line } from "recharts";
+import { LineChart, Line, ResponsiveContainer } from "recharts";
 
 type Props = {
   day: any;
@@ -60,23 +60,20 @@ const TodayGraph = (props: Props) => {
     <div className="rounded-xl shadow-md w-full aspect-auto p-6 flex flex-col gap-5 min-h-[310px] relative glass">
       <div className="flex w-[90%] my-auto mx-auto z-10">
         {chart_data != null && (
-          <LineChart
-            className="px-6"
-            width={580}
-            height={175}
-            data={chart_data}
-          >
-            <Line
-              type="monotone"
-              dataKey="tempertaure"
-              stroke="#f97e28"
-              strokeWidth={2}
-              activeDot={{ r: 5 }}
-            />
-          </LineChart>
+          <ResponsiveContainer width="100%" height={175}>
+            <LineChart className="px-0 lg:px-6" data={chart_data}>
+              <Line
+                type="monotone"
+                dataKey="tempertaure"
+                stroke="#f97e28"
+                strokeWidth={2}
+                activeDot={{ r: 5 }}
+              />
+            </LineChart>
+          </ResponsiveContainer>
         )}
       </div>
-      <div className="grid grid-cols-4 w-[95%] divide-x h-[260px] absolute bottom-6 left-6">
+      <div className="grid grid-cols-4 w-[95%] divide-x h-[260px] absolute bottom-6 left-0 lg:left-6">
         {chart_data?.map((data: any, index: any) => {
           return (
             <div

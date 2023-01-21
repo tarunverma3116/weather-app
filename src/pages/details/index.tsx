@@ -42,12 +42,12 @@ const Details = (props: Props) => {
             </li>
           </ul>
         </div>
-        <div id="myTabContent">
+        <div id="myTabContent" className="w-full">
           {activeTab === "daily" ? (
             <div className="flex flex-col gap-6">
               {props?.weather && (
                 <div className="w-full overflow-x-scroll">
-                  <div className="w-full grid grid-cols-6 gap-4 pb-6">
+                  <div className="w-full grid grid-cols-1 lg:grid-cols-6 gap-4 pb-6">
                     {props.weather.hourly &&
                       props.weather.hourly.map((day: any, index: any) => {
                         return <TodayCard key={index} day={day} />;
@@ -60,7 +60,7 @@ const Details = (props: Props) => {
           ) : (
             <div className="flex flex-col gap-6">
               {props?.weather && (
-                <div className="w-full grid grid-cols-8 gap-4">
+                <div className="w-full grid grid-cols-1 lg:grid-cols-8 gap-4">
                   {props.weather.daily &&
                     props.weather.daily.map((day: any, index: any) => {
                       return <DailyCard key={index} day={day} />;

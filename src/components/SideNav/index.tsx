@@ -54,7 +54,7 @@ const SideNav: React.FunctionComponent<ISideNavProps> = (props) => {
   return (
     <div
       className={twMerge(
-        "overflow-hidden  transition-all border-t-5  border-indigo-400 rounded",
+        "overflow-hidden  transition-all border-t-5  border-indigo-400 rounded hidden lg:flex",
         isCollapsed ? "w-18" : "w-60"
       )}
     >

@@ -64,7 +64,7 @@ const Layout = (props: Props) => {
       <div className="flex flex-grow max-h-full min-h-0 relative pt-14 max-w-full overflow-x-hidden">
         <SideNav />
         <div className="min-h-0 max-h-full max-w-full overflow-y-auto flex-grow scrollbar-hide">
-          <div className="pt-4 px-20">
+          <div className="outlet">
             <Outlet />
           </div>
         </div>
